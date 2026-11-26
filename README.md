@@ -4,16 +4,28 @@ Playwright + pytest tests for https://www.saucedemo.com.
 
 ## Run
 
+You need Python installed (tested with Python 3.14) and an internet connection.
+
+1. Open a terminal in this folder (the folder that contains this `README.md`).
+   On Windows: open the folder in File Explorer, click the address bar, type `powershell`, press Enter.
+2. Copy these four commands, one at a time (Windows):
+
 ```
 python -m venv .venv
-.venv\Scripts\activate            # macOS/Linux: source .venv/bin/activate
-pip install -r requirements.txt
-playwright install chromium
-pytest
+.venv\Scripts\python -m pip install -r requirements.txt
+.venv\Scripts\python -m playwright install chromium
+.venv\Scripts\python -m pytest
 ```
 
+On macOS/Linux use `python3` in the first command and `.venv/bin/python` in the other three.
+
+3. Expected result, after about 15 seconds: a last line like `29 passed`.
+
+Only the assignment's test, with a visible browser:
+`.venv\Scripts\python -m pytest tests/test_login_and_add_to_cart.py --headed`
+
 No configuration is needed. The task's demo account is the default.
-Useful options: `pytest --headed`, `pytest -n 4`, `pytest tests/test_login_and_add_to_cart.py`.
+Other options, added after `-m pytest`: `--headed` (show the browser), `-n 4` (run in parallel).
 
 Report: `allure serve allure-results` (needs the Allure CLI and Java).
 
