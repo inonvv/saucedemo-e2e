@@ -4,7 +4,13 @@ Playwright + pytest tests for https://www.saucedemo.com.
 
 ## Run
 
-You need Python installed (tested with Python 3.14) and an internet connection.
+**Windows, the quick way:** double-click `run.bat`. It installs everything, runs the tests and
+keeps the window open with the result. If Python is missing, it says so and shows how to install it.
+
+**No Python and no wish to install it:** open the `evidence` folder. It holds the screenshot and the
+console output of a finished run.
+
+**By hand:** you need Python installed (tested with Python 3.14) and an internet connection.
 
 1. Open a terminal in this folder (the folder that contains this `README.md`).
    On Windows: open the folder in File Explorer, click the address bar, type `powershell`, press Enter.
