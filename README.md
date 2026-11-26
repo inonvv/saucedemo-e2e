@@ -4,17 +4,13 @@ Playwright + pytest tests for https://www.saucedemo.com.
 
 ## Run
 
-**Windows, the quick way:** double-click `run.bat`. It installs everything, runs the tests, opens the
-Allure report in the browser and keeps the window open with the result. If Python is missing, it says so and shows how to install it.
+1. Download the zip (green **Code** button, then **Download ZIP**) and extract it.
+2. Double-click `run.bat`.
+3. Wait a few minutes. The Allure report opens in your browser.
 
-**No Python and no wish to install it:** open the `evidence` folder. It holds the screenshot and the
-console output of a finished run.
+That is all. If Python is missing, the window tells you how to install it.
 
-**By hand:** you need Python installed (tested with Python 3.14) and an internet connection.
-
-1. Open a terminal in this folder (the folder that contains this `README.md`).
-   On Windows: open the folder in File Explorer, click the address bar, type `powershell`, press Enter.
-2. Copy these four commands, one at a time (Windows):
+Not on Windows, or prefer commands? Run these in the folder:
 
 ```
 python -m venv .venv
@@ -23,17 +19,9 @@ python -m venv .venv
 .venv\Scripts\python -m pytest
 ```
 
-On macOS/Linux use `python3` in the first command and `.venv/bin/python` in the other three.
+(macOS/Linux: `python3`, and `.venv/bin/python` instead of `.venv\Scripts\python`.)
 
-3. Expected result, after about 15 seconds: a last line like `29 passed`.
-
-Only the assignment's test, with a visible browser:
-`.venv\Scripts\python -m pytest tests/test_login_and_add_to_cart.py --headed`
-
-No configuration is needed. The task's demo account is the default.
-Other options, added after `-m pytest`: `--headed` (show the browser), `-n 4` (run in parallel).
-
-Report: `allure serve allure-results` (needs the Allure CLI and Java).
+The result is a last line like `29 passed`.
 
 ## The task test
 
