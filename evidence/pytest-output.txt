@@ -1,0 +1,49 @@
+============================= test session starts =============================
+platform win32 -- Python 3.14.6, pytest-9.2.0, pluggy-1.7.0 -- C:\Users\inon\working-projects\saucedemo\.venv\Scripts\python.exe
+rootdir: C:\Users\inon\working-projects\saucedemo
+configfile: pytest.ini
+testpaths: tests
+plugins: allure-pytest-2.16.2, playwright-0.10.0, xdist-3.8.0
+collecting ... collected 29 items
+
+tests/test_cart.py::test_cart_page_lists_added_product[chromium] PASSED  [  3%]
+tests/test_cart.py::test_remove_from_cart_clears_badge[chromium] PASSED  [  6%]
+tests/test_e2e_shopping.py::test_shopping_under_budget[chromium-Sauce Labs] PASSED [ 10%]
+tests/test_e2e_shopping.py::test_shopping_under_budget[chromium-T-Shirt] PASSED [ 13%]
+tests/test_login_and_add_to_cart.py::test_login_add_product_badge_shows_1[chromium] PASSED [ 17%]
+tests/test_login_negative.py::test_locked_out_user_is_rejected[chromium] PASSED [ 20%]
+tests/test_login_negative.py::test_wrong_password_is_rejected[chromium] PASSED [ 24%]
+tests/test_units.py::test_parse_money[$29.99-29.99-USD] PASSED           [ 27%]
+tests/test_units.py::test_parse_money[Item total: $1,039.98-1039.98-USD] PASSED [ 31%]
+tests/test_units.py::test_parse_money[\u20ac 7-7-EUR] PASSED             [ 34%]
+tests/test_units.py::test_parse_money_rejects_text_without_currency[] PASSED [ 37%]
+tests/test_units.py::test_parse_money_rejects_text_without_currency[29.99] PASSED [ 41%]
+tests/test_units.py::test_parse_money_rejects_text_without_currency[free] PASSED [ 44%]
+tests/test_units.py::test_page_name[https://www.saucedemo.com/-] PASSED  [ 48%]
+tests/test_units.py::test_page_name[https://www.saucedemo.com/cart.html-cart] PASSED [ 51%]
+tests/test_units.py::test_page_name[https://www.saucedemo.com/checkout-step-two.html?x=1-checkout-step-two] PASSED [ 55%]
+tests/test_units.py::test_search_input_rejects_bad_data[bad0] PASSED     [ 58%]
+tests/test_units.py::test_search_input_rejects_bad_data[bad1] PASSED     [ 62%]
+tests/test_units.py::test_search_input_rejects_bad_data[bad2] PASSED     [ 65%]
+tests/test_units.py::test_search_input_rejects_bad_data[bad3] PASSED     [ 68%]
+tests/test_units.py::test_search_input_rejects_bad_data[bad4] PASSED     [ 72%]
+tests/test_units.py::test_page_snapshot_accepts_the_expected_page PASSED [ 75%]
+tests/test_units.py::test_page_snapshot_rejects_a_wrong_page[change0] PASSED [ 79%]
+tests/test_units.py::test_page_snapshot_rejects_a_wrong_page[change1] PASSED [ 82%]
+tests/test_units.py::test_page_snapshot_rejects_a_wrong_page[change2] PASSED [ 86%]
+tests/test_units.py::test_ok_response_requires_2xx_or_3xx[200-True] PASSED [ 89%]
+tests/test_units.py::test_ok_response_requires_2xx_or_3xx[302-True] PASSED [ 93%]
+tests/test_units.py::test_ok_response_requires_2xx_or_3xx[404-False] PASSED [ 96%]
+tests/test_units.py::test_ok_response_requires_2xx_or_3xx[500-False] PASSED [100%]
+
+============================== warnings summary ===============================
+tests/test_cart.py::test_cart_page_lists_added_product[chromium]
+  C:\Users\inon\working-projects\saucedemo\.venv\Lib\site-packages\_pytest\fixtures.py:1392: PytestRemovedIn10Warning: Session-scoped fixtures defined as instance methods are deprecated.
+  Instance attributes set in the 'base_url' fixture will NOT be visible to test methods,
+  as each test gets a new instance while the fixture runs only once per class.
+  Use a @classmethod decorator below @pytest.fixture and set attributes on cls instead.
+  See https://docs.pytest.org/en/stable/deprecations.html#class-scoped-fixture-as-instance-method
+    fixturefunc = resolve_fixture_function(fixturedef, request)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================== 29 passed, 1 warning in 9.97s ========================

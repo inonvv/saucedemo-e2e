@@ -1,0 +1,4 @@
+[
+  {"query": "Sauce Labs", "maxPrice": 20, "limit": 3, "budgetPerItem": 20, "currency": "USD"},
+  {"query": "T-Shirt", "maxPrice": 16, "limit": 2, "budgetPerItem": 16, "currency": "USD"}
+]

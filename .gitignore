@@ -1,0 +1,11 @@
+.env
+.venv/
+__pycache__/
+.pytest_cache/
+allure-results/
+allure-report/
+test-results/
+.claude/
+submission/
+# graft's local graph cache — regenerable, not committed (run `graft build`).
+/graft/
