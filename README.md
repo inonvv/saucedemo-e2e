@@ -4,8 +4,8 @@ Playwright + pytest tests for https://www.saucedemo.com.
 
 ## Run
 
-**Windows, the quick way:** double-click `run.bat`. It installs everything, runs the tests and
-keeps the window open with the result. If Python is missing, it says so and shows how to install it.
+**Windows, the quick way:** double-click `run.bat`. It installs everything, runs the tests, opens the
+Allure report in the browser and keeps the window open with the result. If Python is missing, it says so and shows how to install it.
 
 **No Python and no wish to install it:** open the `evidence` folder. It holds the screenshot and the
 console output of a finished run.

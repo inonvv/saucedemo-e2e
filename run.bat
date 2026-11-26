@@ -51,5 +51,22 @@ if errorlevel 1 (
 echo [4/4] Running the tests...
 ".venv\Scripts\python.exe" -m pytest %*
 echo.
-echo Done. The last line above shows the result, for example "29 passed".
+echo Done. The line above with "passed" shows the result, for example "29 passed".
+
+rem Show the Allure report: build a fresh one if the Allure tool is installed, else open the saved one.
+set "REPORT="
+where allure >nul 2>&1
+if not errorlevel 1 (
+    echo Building the Allure report of this run...
+    call allure generate allure-results -o allure-report --clean --single-file >nul 2>&1
+    if exist "allure-report\index.html" set "REPORT=allure-report\index.html"
+)
+if not defined REPORT if exist "evidence\allure-report\index.html" (
+    echo The Allure tool is not installed here, so this opens the saved report of the author's run.
+    set "REPORT=evidence\allure-report\index.html"
+)
+if defined REPORT (
+    echo Opening the report in the browser: %REPORT%
+    start "" "%REPORT%"
+)
 pause
